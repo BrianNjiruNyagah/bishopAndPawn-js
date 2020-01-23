@@ -1,0 +1,17 @@
+function bishopAndPawn(bishop, pawn) {
+    let alphabets = ['a','b','c','d','e','f','g','h'];
+    
+    //makes coordinates into numbers toeasily identify their location
+    let bishopLocation1 = alphabets.indexOf(bishop[0])+1;
+    let pawnLocation1 = alphabets.indexOf(pawn[0])+1;
+    //
+    let a = bishopLocation1 - pawnLocation1;
+    let b = bishop[1] - pawn[1];
+    
+    //checks if the pawn is on the path of the bishop
+    if(Math.abs(a) === Math.abs(b)){
+        return true;
+    }else{
+        return false;
+    }
+}
